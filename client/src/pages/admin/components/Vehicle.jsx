@@ -19,7 +19,7 @@ export default function Vehicle() {
   useEffect(() => {
     const fetchVehicles = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/v1/user/vehicles', {
+        const response = await axios.get('https://fuelemy-fp6mav64y-saatvks-projects.vercel.app//api/v1/user/vehicles', {
           headers: {
             'x-auth-token': localStorage.getItem('token'), // Ensure the token is included
           },
@@ -81,14 +81,14 @@ export default function Vehicle() {
         return;
       }
 
-      await axios.post('http://localhost:3001/api/v1/user/vehicles', formData, {
+      await axios.post('https://fuelemy-fp6mav64y-saatvks-projects.vercel.app//api/v1/user/vehicles', formData, {
         headers: {
           'x-auth-token': token,
           'Content-Type': 'multipart/form-data',
         },
       });
       setShowPopup(false);
-      const response = await axios.get('http://localhost:3001/api/v1/user/vehicles', {
+      const response = await axios.get('https://fuelemy-fp6mav64y-saatvks-projects.vercel.app//api/v1/user/vehicles', {
         headers: {
           'x-auth-token': token,
         },
