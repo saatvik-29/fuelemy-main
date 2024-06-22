@@ -11,7 +11,7 @@ export default function SignIn() {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://fuelemy-fp6mav64y-saatvks-projects.vercel.app//api/v1/user/login', {
+      const response = await fetch('https://fuelemy-fp6mav64y-saatvks-projects.vercel.app/api/v1/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
