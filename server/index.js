@@ -10,7 +10,7 @@ connectDB();
 
 app.use(cors());
 app.use(cors({
-  origin: ["https://fuelemy-fp6mav64y-saatvks-projects.vercel.app"],
+  origin: ["https://fuelemy-server.vercel.app/"],
   methods: ["POST", "GET"],
   credentials: true
 }));
