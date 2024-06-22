@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -6,6 +7,7 @@ import Admin from "./pages/admin/Admin";
 import SignUp from "./pages/SignUp";
 import SignIn from "./SignIn";
 // import SignIn from "./pages/SignIn";
+
 
 
 export default function App() {
