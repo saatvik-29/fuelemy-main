@@ -19,7 +19,7 @@ export default function Driver() {
   useEffect(() => {
     const fetchDrivers = async () => {
       try {
-        const response = await axios.get('https://fuelemy-server.vercel.app/api/v1/user/drivers', {
+        const response = await axios.get('https://fuelemy-server.vercel.app/drivers', {
           headers: {
             'x-auth-token': localStorage.getItem('token'), // Ensure the token is included
           },
@@ -32,7 +32,7 @@ export default function Driver() {
 
     const fetchVehicles = async () => {
       try {
-        const response = await axios.get('https://fuelemy-server.vercel.app/api/v1/user/vehicles', {
+        const response = await axios.get('https://fuelemy-server.vercel.app/vehicles', {
           headers: {
             'x-auth-token': localStorage.getItem('token'), // Ensure the token is included
           },
@@ -95,14 +95,14 @@ export default function Driver() {
         return;
       }
 
-      await axios.post('https://fuelemy-server.vercel.app/api/v1/user/drivers', formData, {
+      await axios.post('https://fuelemy-server.vercel.app/drivers', formData, {
         headers: {
           'x-auth-token': token,
           'Content-Type': 'multipart/form-data',
         },
       });
       setShowPopup(false);
-      const response = await axios.get('https://fuelemy-server.vercel.app/api/v1/user/drivers', {
+      const response = await axios.get('https://fuelemy-server.vercel.app/drivers', {
         headers: {
           'x-auth-token': token,
         },

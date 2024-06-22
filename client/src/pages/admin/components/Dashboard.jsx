@@ -14,13 +14,13 @@ export default function Dashboard() {
           return;
         }
 
-        const vehiclesResponse = await axios.get('https://fuelemy-server.vercel.app/api/v1/user/vehicles', {
+        const vehiclesResponse = await axios.get('https://fuelemy-server.vercel.app/vehicles', {
           headers: {
             'x-auth-token': token,
           },
         });
 
-        const driversResponse = await axios.get('https://fuelemy-server.vercel.app/api/v1/user/drivers', {
+        const driversResponse = await axios.get('https://fuelemy-server.vercel.app/drivers', {
           headers: {
             'x-auth-token': token,
           },
